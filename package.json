@@ -3,20 +3,42 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
+    "babel-loader": "^8.0.4",
+    "bootstrap": "^4.2.1",
     "coveralls": "^3.0.2",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "expect": "^23.6.0",
+    "fetch-mock": "^7.2.7",
     "jest-enzyme": "^7.0.1",
+    "jquery": "^3.3.1",
+    "moxios": "^0.4.0",
+    "node-fetch": "^2.3.0",
+    "node-sass": "^4.11.0",
+    "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "react-redux": "^6.0.0",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.2",
-    "react-test-renderer": "^16.7.0"
+    "react-test-renderer": "^16.7.0",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.7",
+    "redux-mock-store": "^1.5.3",
+    "redux-thunk": "^2.3.0",
+    "sass-loader": "^7.1.0",
+    "sweetalert2": "^7.33.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom --modulePaths=src",
     "eject": "react-scripts eject",
+    "lint": "eslint src",
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"
   },
   "eslintConfig": {
@@ -31,6 +53,11 @@
   "jest": {
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,mjs}",
+      "!src/index.js",
+      "!src/store.js"
     ]
   }
 }

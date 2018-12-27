@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the login component 1`] = `
+<div
+  className="container"
+  id="container1"
+>
+  <h3
+    className="text-left"
+  >
+    Login
+  </h3>
+  <form
+    className="centered-form"
+    onSubmit={[Function]}
+  >
+    <div
+      className="form-group"
+    >
+      <input
+        className="form-control"
+        id="email"
+        onChange={[Function]}
+        placeholder="Email"
+        type="email"
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <input
+        className="form-control"
+        id="pwd"
+        onChange={[Function]}
+        placeholder="Password"
+        type="password"
+      />
+    </div>
+    <div
+      className="form-group form-check"
+    />
+    <button
+      className="btn btn-primary"
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</div>
+`;
+
+exports[`renders the signup component 1`] = `
+<div
+  className="container"
+  id="container1"
+>
+  <h3
+    className="text-left"
+  >
+    Sign up
+  </h3>
+  <form
+    className="centered-form"
+    onSubmit={[Function]}
+  >
+    <div
+      className="form-group"
+    >
+      <input
+        className="form-control"
+        id="email"
+        name="email"
+        onChange={[Function]}
+        placeholder="Email"
+        type="email"
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      <input
+        className="form-control"
+        id="password"
+        name="password"
+        onChange={[Function]}
+        placeholder="Password"
+        type="password"
+      />
+    </div>
+    <button
+      className="btn btn-primary"
+      onClick={[Function]}
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</div>
+`;
