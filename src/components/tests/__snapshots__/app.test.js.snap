@@ -11,6 +11,11 @@ exports[`renders the signup component 1`] = `
     <Route
       component={[Function]}
       exact={true}
+      path="/questions"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
       path="/post_question"
     />
     <Route

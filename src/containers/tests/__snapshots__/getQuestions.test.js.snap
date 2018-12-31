@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Handles ViewAllQtns container renders correctly 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(ViewallQtns)
+    questions={
+      Array [
+        Object {
+          "description": "so what is this mahn?",
+          "tags": "This",
+          "title": "what is this?",
+        },
+      ]
+    }
+    viewQuestions={[MockFunction]}
+  >
+    <ViewallQtns
+      questions={Array []}
+      viewAllQtns={[Function]}
+      viewQuestions={[MockFunction]}
+    >
+      <div
+        className="container"
+      >
+        Loading Questions ... 
+      </div>
+    </ViewallQtns>
+  </Connect(ViewallQtns)>
+</Provider>
+`;
+
+exports[`Handles ViewAllQtns container renders correctly 2`] = `
+<ViewallQtns
+  questions={Array []}
+  viewAllQtns={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+      ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  viewQuestions={[MockFunction]}
+>
+  <div
+    className="container"
+  >
+    Loading Questions ... 
+  </div>
+</ViewallQtns>
+`;

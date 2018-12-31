@@ -19,3 +19,8 @@ export const getQuestionInput = payload => ({
   type: ACTION_TYPE.GET_QUESTION_INPUT,
   payload,
 });
+
+export const getQuestions = payload => ({
+  type: ACTION_TYPE.GET_ALL_QUESTIONS,
+  payload,
+});

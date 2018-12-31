@@ -1,9 +1,9 @@
 import swal from 'sweetalert2';
 import ACTION_TYPE from './actionTypes';
 
-const postQuestion = data => (dispatch) => {
+const postQuestion = qtn => (dispatch) => {
   swal.showLoading();
-  // const data = { Question: question };
+
   const token = localStorage.getItem('token');
   return fetch('http://127.0.0.1:5000/api/v1/questions',
     {
@@ -13,7 +13,7 @@ const postQuestion = data => (dispatch) => {
         'Content-type': 'application/json',
         Authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(qtn),
     })
     .then(response => (response.json())
       .then(data => ((response.ok && Promise.resolve(data)) || (!response.ok && Promise.reject(data)
