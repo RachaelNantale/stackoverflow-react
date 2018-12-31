@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the signup component 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="form-group"
+  >
+    <form
+      className="form-horizontal"
+      onSubmit={[Function]}
+    >
+      <h5>
+        Title: 
+      </h5>
+      <input
+        className="form-control"
+        id="title"
+        name="title"
+        onChange={[Function]}
+        placeholder="What's your programming question. Be specific"
+        type="text"
+      />
+      <br />
+      <h5>
+        Description: 
+      </h5>
+      <textarea
+        className="form-control"
+        cols="14"
+        id="description"
+        name="description"
+        onChange={[Function]}
+        rows="7"
+      />
+      <br />
+      <h5>
+        Tags: 
+      </h5>
+      <input
+        className="form-control"
+        id="tags"
+        name="tags"
+        onChange={[Function]}
+        placeholder="Atleast one tag"
+        type="text"
+      />
+      <br />
+      <button
+        className="btn btn-primary"
+        onClick={[Function]}
+        type="submit"
+      >
+        Post Your Question 
+      </button>
+    </form>
+  </div>
+</div>
+`;
