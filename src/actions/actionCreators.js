@@ -14,3 +14,8 @@ export const getUserInput = payload => ({
   type: ACTION_TYPE.GET_USER_INPUT,
   payload,
 });
+
+export const getQuestionInput = payload => ({
+  type: ACTION_TYPE.GET_QUESTION_INPUT,
+  payload,
+});

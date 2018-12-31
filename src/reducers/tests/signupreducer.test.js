@@ -6,6 +6,7 @@ import ACTION_TYPE from '../../actions/actionTypes';
 const initialState = {
   loginReducer: { freshUser: { email: '', password: '' } },
   userReducer: { freshUser: { email: '', password: '' } },
+  postQtnReducer: { Question: { title: '', description: '', tags: '' } },
 };
 describe('it should have inital state', () => {
   it('should return the initial state', () => {

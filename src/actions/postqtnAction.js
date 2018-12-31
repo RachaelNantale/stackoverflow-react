@@ -1,14 +1,17 @@
 import swal from 'sweetalert2';
 import ACTION_TYPE from './actionTypes';
 
-const userLogin = data => (dispatch) => {
+const postQuestion = data => (dispatch) => {
   swal.showLoading();
-  return fetch('http://127.0.0.1:5000/api/v1/auth/login',
+  // const data = { Question: question };
+  const token = localStorage.getItem('token');
+  return fetch('http://127.0.0.1:5000/api/v1/questions',
     {
       method: 'POST',
       headers: {
         Accept: 'application/json, */*',
         'Content-type': 'application/json',
+        Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify(data),
     })
@@ -17,28 +20,26 @@ const userLogin = data => (dispatch) => {
       ))))
     .then((data) => {
       dispatch({
-        type: ACTION_TYPE.USER_LOGIN,
+        type: ACTION_TYPE.POST_A_QUESTION_SUCCESS,
         payload: data,
       });
-      localStorage.setItem('token', data.token);
       swal({
-        title: 'Login Successful',
+        title: 'Successfully posted a Question',
         type: 'success',
         confirmButtonText: 'continue',
       });
-      setTimeout(() => window.location.replace('/'), 3000);
     })
     .catch((error) => {
       dispatch({
-        type: ACTION_TYPE.USER_LOGIN_FAIL,
+        type: ACTION_TYPE.POST_A_QUESTION_FAILURE,
         payload: error,
       });
       swal({
-        title: 'Sorry, couldnt login',
+        title: 'Sorry, couldnt create question',
         type: 'error',
         confirmButtonText: 'Try again',
         text: error.message,
       });
     });
 };
-export default userLogin;
+export default postQuestion;
