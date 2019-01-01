@@ -22,7 +22,7 @@ describe('<QuestionPage />', () => {
       payload: {},
       type: ACTION_TYPE.GET_QUESTION_INPUT,
     });
-    mapDispatchToProps(dispatch).postQuestion({});
+    mapDispatchToProps(dispatch).PostQuestion({});
   });
 
   it('should call handle input user method', () => {

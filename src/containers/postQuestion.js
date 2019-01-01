@@ -14,8 +14,8 @@ export class QuestionPage extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    const { freshQtn, postQuestion } = this.props;
-    postQuestion(freshQtn);
+    const { freshQtn, PostQuestion } = this.props;
+    PostQuestion(freshQtn);
   };
 
 
@@ -30,12 +30,12 @@ export class QuestionPage extends Component {
 }
 
 QuestionPage.propTypes = {
-  postQuestion: PropTypes.func,
+  PostQuestion: PropTypes.func,
   getQuestionInputs: PropTypes.func,
   freshQtn: PropTypes.shape({}),
 };
 QuestionPage.defaultProps = {
-  postQuestion: () => {},
+  PostQuestion: () => {},
   getQuestionInputs: () => {},
   freshQtn: {},
 };
@@ -46,7 +46,7 @@ const mapStateToProps = ({ postQtnReducer }) => (
 
 export const mapDispatchToProps = dispatch => (
   {
-    postQuestion: qtn => dispatch(postQuestion(qtn)),
+    PostQuestion: qtn => dispatch(postQuestion(qtn)),
     getQuestionInputs: obj => dispatch(getQuestionInput(obj)),
   }
 );

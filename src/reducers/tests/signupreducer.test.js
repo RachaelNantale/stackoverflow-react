@@ -7,6 +7,7 @@ const initialState = {
   loginReducer: { freshUser: { email: '', password: '' } },
   userReducer: { freshUser: { email: '', password: '' } },
   postQtnReducer: { Question: { title: '', description: '', tags: '' } },
+  getQuestionsReducer: { qtns: [] },
 };
 describe('it should have inital state', () => {
   it('should return the initial state', () => {
@@ -16,7 +17,6 @@ describe('it should have inital state', () => {
     expect(userReducer(initialState.userReducer, {})).toEqual(initialState.userReducer);
   });
   it('Test registration was successful', () => {
-    const initialState = {};
     const payload = {
       email: 'marryme@gmail.com',
     };
@@ -31,7 +31,6 @@ describe('it should have inital state', () => {
     expect(userReducer(initialState, action)).toEqual(expectedData);
   });
   it('Test registration failed', () => {
-    const initialState = {};
     const payload = {
       email: 'marrymegmail.com',
     };
@@ -46,7 +45,6 @@ describe('it should have inital state', () => {
     expect(userReducer(initialState, action)).toEqual(expectedData);
   });
   it('Test registration failed', () => {
-    const initialState = {};
     const payload = {
       email: 'marrymegmail.com',
       password: 'neddassebo',

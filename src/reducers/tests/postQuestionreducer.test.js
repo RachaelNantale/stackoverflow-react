@@ -14,7 +14,6 @@ describe('it should have inital state', () => {
     expect(postQtnReducer(initialState.postQtnReducer, {})).toEqual(initialState.postQtnReducer);
   });
   it('Test posting a question was successful', () => {
-    const initialState = {};
     const payload = {
       title: 'this is a title',
       description: 'this is a description',
@@ -31,7 +30,6 @@ describe('it should have inital state', () => {
     expect(postQtnReducer(initialState, action)).toEqual(expectedData);
   });
   it('Test posting a question failed', () => {
-    const initialState = {};
     const payload = {
       title: 'm',
     };
@@ -46,7 +44,6 @@ describe('it should have inital state', () => {
     expect(postQtnReducer(initialState, action)).toEqual(expectedData);
   });
   it('Test registration failed', () => {
-    const initialState = {};
     const payload = {
       title: 'this is a title',
       description: 'this is a description',

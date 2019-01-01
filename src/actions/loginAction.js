@@ -1,7 +1,7 @@
 import swal from 'sweetalert2';
 import ACTION_TYPE from './actionTypes';
 
-const userLogin = data => (dispatch) => {
+const userLogin = user => (dispatch) => {
   swal.showLoading();
   return fetch('http://127.0.0.1:5000/api/v1/auth/login',
     {
@@ -10,7 +10,7 @@ const userLogin = data => (dispatch) => {
         Accept: 'application/json, */*',
         'Content-type': 'application/json',
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(user),
     })
     .then(response => (response.json())
       .then(data => ((response.ok && Promise.resolve(data)) || (!response.ok && Promise.reject(data)

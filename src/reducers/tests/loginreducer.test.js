@@ -10,7 +10,6 @@ describe('it should have inital state', () => {
     expect(loginReducer(initialState.loginReducer, {})).toEqual(initialState.loginReducer);
   });
   it('Test login was successful', () => {
-    const initialState = {};
     const payload = {
       email: 'marryme@gmail.com',
       password: 'neddasebo',
@@ -27,7 +26,6 @@ describe('it should have inital state', () => {
     expect(loginReducer(initialState, action)).toEqual(expectedData);
   });
   it('Test login failed', () => {
-    const initialState = {};
     const payload = {
       email: 'marrymegmail.com',
     };
@@ -42,7 +40,6 @@ describe('it should have inital state', () => {
     expect(loginReducer(initialState, action)).toEqual(expectedData);
   });
   it('Test registration failed', () => {
-    const initialState = {};
     const payload = {
       email: 'marrymegmail.com',
       password: 'neddassebo',
