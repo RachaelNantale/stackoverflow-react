@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<AuthPage /> should render the component 1`] = `
+exports[`<LoginPage /> should render the component 1`] = `
 <Provider
   store={
     Object {
@@ -13,8 +13,8 @@ exports[`<AuthPage /> should render the component 1`] = `
     }
   }
 >
-  <Connect(AuthPage)>
-    <AuthPage
+  <Connect(LoginPage)>
+    <LoginPage
       freshUser={
         Object {
           "email": "",
@@ -22,12 +22,12 @@ exports[`<AuthPage /> should render the component 1`] = `
         }
       }
       getUserInputs={[Function]}
-      signUpuser={[Function]}
+      loginUser={[Function]}
     >
       <Signup
         onChange={[Function]}
         onSubmit={[Function]}
-        title="Signup"
+        title="Login"
       >
         <div
           className=" signup-container"
@@ -39,7 +39,7 @@ exports[`<AuthPage /> should render the component 1`] = `
             <h3
               className="text-center "
             >
-              Signup
+              Login
             </h3>
             <div
               className="form-group"
@@ -75,7 +75,7 @@ exports[`<AuthPage /> should render the component 1`] = `
           </form>
         </div>
       </Signup>
-    </AuthPage>
-  </Connect(AuthPage)>
+    </LoginPage>
+  </Connect(LoginPage)>
 </Provider>
 `;

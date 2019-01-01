@@ -9,7 +9,6 @@ const initialState = {
 };
 
 const postQtnReducer = (state = initialState, action) => {
-  // const { Question } = state;
   const QtnData = {
     ...state,
     data: action.payload,

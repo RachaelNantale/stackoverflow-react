@@ -1,14 +1,21 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
+import configureStore from 'redux-mock-store';
 import QuestionPageConnected, { mapDispatchToProps, QuestionPage } from '../postQuestion';
-
 import ACTION_TYPE from '../../actions/actionTypes';
+
+const middlewares = [thunk];
+const mockStore = configureStore(middlewares);
 
 describe('<QuestionPage />', () => {
   let QuestionPageComponent;
   let wrapper;
   beforeEach(() => {
-    QuestionPageComponent = shallow(<QuestionPageConnected />);
+    const initialState = { postQtnReducer: { Question: { title: '', description: '', tags: '' } } };
+    const store = mockStore(initialState);
+    QuestionPageComponent = mount(<Provider store={store}><QuestionPageConnected /></Provider>);
   });
 
   it('should render the component', () => {
@@ -22,7 +29,7 @@ describe('<QuestionPage />', () => {
       payload: {},
       type: ACTION_TYPE.GET_QUESTION_INPUT,
     });
-    mapDispatchToProps(dispatch).postQuestion({});
+    mapDispatchToProps(dispatch).PostQuestion({});
   });
 
   it('should call handle input user method', () => {

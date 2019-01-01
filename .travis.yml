@@ -8,6 +8,7 @@ cache:
 script:
   - npm i
   - npm install coveralls
+  - npm run lint
   - npm test -- -u --coverage 
 after_success:
   - npm run coveralls

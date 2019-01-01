@@ -2,6 +2,7 @@
 
 exports[`renders the signup component 1`] = `
 <BrowserRouter>
+  <Header />
   <Switch>
     <Route
       component={[Function]}
@@ -11,11 +12,20 @@ exports[`renders the signup component 1`] = `
     <Route
       component={[Function]}
       exact={true}
+      path="/questions"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
       path="/post_question"
     />
     <Route
       component={[Function]}
       path="/signup"
+    />
+    <Route
+      component={[Function]}
+      path="/login"
     />
   </Switch>
 </BrowserRouter>

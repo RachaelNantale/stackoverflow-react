@@ -15,11 +15,6 @@ const data = {
   description: 'This is a description',
   tags: 'tags, tag',
 };
-const vagueData = {
-  title: '',
-  description: 'This is a description',
-  tags: 'tags, tag',
-};
 describe('Post a Question Actions', () => {
   afterEach(() => {
     fetchMock.restore();

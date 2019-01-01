@@ -1,7 +1,92 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<QuestionPage /> should render the component 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(QuestionPage)>
+    <QuestionPage
+      PostQuestion={[Function]}
+      freshQtn={
+        Object {
+          "description": "",
+          "tags": "",
+          "title": "",
+        }
+      }
+      getQuestionInputs={[Function]}
+    >
+      <Question
+        onChange={[Function]}
+        onSubmit={[Function]}
+      >
+        <div
+          className="container post-container"
+        >
+          <div
+            className="form-group"
+          >
+            <form
+              className="form-horizontal"
+              onSubmit={[Function]}
+            >
+              <h5>
+                Title: 
+              </h5>
+              <input
+                className="form-control"
+                id="title"
+                name="title"
+                onChange={[Function]}
+                placeholder="What's your programming question. Be specific"
+                type="text"
+              />
+              <br />
+              <h5>
+                Description: 
+              </h5>
+              <textarea
+                className="form-control"
+                cols="14"
+                id="description"
+                name="description"
+                onChange={[Function]}
+                rows="7"
+              />
+              <br />
+              <h5>
+                Tags: 
+              </h5>
+              <input
+                className="form-control"
+                id="tags"
+                name="tags"
+                onChange={[Function]}
+                placeholder="Atleast one tag"
+                type="text"
+              />
+              <br />
+              <button
+                className="btn btn-primary"
+                onClick={[Function]}
+                type="submit"
+              >
+                Post Your Question 
+              </button>
+            </form>
+          </div>
+        </div>
+      </Question>
+    </QuestionPage>
+  </Connect(QuestionPage)>
+</Provider>
 `;
