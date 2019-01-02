@@ -5,7 +5,7 @@ const postQuestion = qtn => (dispatch) => {
   swal.showLoading();
 
   const token = localStorage.getItem('token');
-  return fetch('http://127.0.0.1:5000/api/v1/questions',
+  return fetch('https://stackoverflow-lite222.herokuapp.com/api/v1/questions',
     {
       method: 'POST',
       headers: {
@@ -28,6 +28,7 @@ const postQuestion = qtn => (dispatch) => {
         type: 'success',
         confirmButtonText: 'continue',
       });
+      setTimeout(() => window.location.replace('/'), 3000);
     })
     .catch((error) => {
       dispatch({

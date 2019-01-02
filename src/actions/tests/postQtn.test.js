@@ -8,7 +8,7 @@ import postQuestion from '../postqtnAction';
 const middlewares = [thunk];
 const mockStore = configureStore(middlewares);
 
-const POST_URL = 'http://127.0.0.1:5000/api/v1/questions';
+const POSTY_URL = 'https://stackoverflow-lite222.herokuapp.com/api/v1/questions';
 
 const data = {
   title: 'This is a title',
@@ -21,7 +21,7 @@ describe('Post a Question Actions', () => {
   });
 
   it('Handles Posting a question', () => {
-    fetchMock.post(POST_URL, data);
+    fetchMock.post(POSTY_URL, data);
     const store = mockStore({});
     const expectedAction = [{ type: ACTION_TYPE.POST_A_QUESTION_SUCCESS, payload: data }];
     return store

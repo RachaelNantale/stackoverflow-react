@@ -1,16 +1,13 @@
 {
   "name": "stackoverflow-react",
-  "scripts": {
-  },
-  "env": {
-  },
-  "formation": {
-  },
-  "addons": [
-
-  ],
-  "stack": "heroku-18",
-  "buildpacks": [
-
-  ]
+  "version": "0.1.0",
+  "scripts": {},
+  "env": {},
+  "formation": {},
+  "addons": [],
+  "buildpacks": [],
+  "engines": {
+    "npm": "6.4.1",
+    "node": "8.12.0"
+  }
 }
