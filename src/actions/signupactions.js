@@ -3,7 +3,7 @@ import ACTION_TYPE from './actionTypes';
 
 const userSignup = user => (dispatch) => {
   swal.showLoading();
-  return fetch('http://127.0.0.1:5000/api/v1/auth/signup',
+  return fetch('https://stackoverflow-lite222.herokuapp.com/api/v1/auth/signup',
     {
       method: 'POST',
       headers: {

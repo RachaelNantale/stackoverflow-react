@@ -9,7 +9,7 @@ import ACTION_TYPE from '../actionTypes';
 const middlewares = [thunk];
 const mockStore = configureStore(middlewares);
 
-const LOGIN_URL = 'http://127.0.0.1:5000/api/v1/auth/login';
+const LOGIN_URL = 'https://stackoverflow-lite222.herokuapp.com/api/v1/auth/login';
 
 const data = {
   email: 'marryme@gmail.com',
