@@ -6,7 +6,7 @@
 ## Description
 The website serves as a platform for users to ask and answer questions, to vote questions and answers up or down and edit questions and answers.
 
-[Here is my Deployed app](https://stactoverflow-lite-staging.herokuapp.com)
+[Here is my Deployed app](https://stackoverflow-lite-staging.herokuapp.com)
 
 ## Features
 
