@@ -25,6 +25,6 @@ Questions.propTypes = {
   question: PropTypes.shape({}),
 };
 Questions.defaultProps = {
-  question: [],
+  question: {},
 };
 export default Questions;

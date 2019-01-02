@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './postqtn.scss';
 
 const Question = ({ onSubmit, onChange }) => (
-  <div className="container">
+  <div className="container post-container">
     <div className="form-group">
       <form className="form-horizontal" onSubmit={onSubmit}>
         <h5>Title: </h5>

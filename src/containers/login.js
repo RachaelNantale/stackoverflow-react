@@ -2,57 +2,56 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getUserInput } from '../actions/actionCreators';
-import userSignup from '../actions/signupactions';
+import userLogin from '../actions/loginAction';
 import Signup from '../components/Signup/signup';
 import './auth.scss';
 import '../components/Home/home.scss';
 
 
-export class AuthPage extends Component {
+export class LoginPage extends Component {
   handleUpdateFields = (event) => {
     const { name, value } = event.target;
     const { freshUser, getUserInputs } = this.props;
     getUserInputs({ ...freshUser, [name]: value });
   };
 
-  handleSignUp = (event) => {
+  handleLogin = (event) => {
     event.preventDefault();
-    const { freshUser, signUpuser } = this.props;
-    signUpuser(freshUser);
+    const { freshUser, loginUser } = this.props;
+    loginUser(freshUser);
   };
-
 
   render() {
     return (
       <Signup
         onChange={this.handleUpdateFields}
-        onSubmit={this.handleSignUp}
-        title="Signup"
+        onSubmit={this.handleLogin}
+        title="Login"
       />
     );
   }
 }
 
-AuthPage.propTypes = {
-  signUpuser: PropTypes.func,
+LoginPage.propTypes = {
+  loginUser: PropTypes.func,
   getUserInputs: PropTypes.func,
   freshUser: PropTypes.shape({}),
 };
-AuthPage.defaultProps = {
-  signUpuser: () => {},
+LoginPage.defaultProps = {
+  loginUser: () => {},
   getUserInputs: () => {},
   freshUser: {},
 };
 
-const mapStateToProps = ({ userReducer }) => (
-  { freshUser: userReducer.freshUser }
+const mapStateToProps = ({ loginReducer }) => (
+  { freshUser: loginReducer.freshUser }
 );
 
 export const mapDispatchToProps = dispatch => (
   {
-    signUpuser: user => dispatch(userSignup(user)),
+    loginUser: user => dispatch(userLogin(user)),
     getUserInputs: obj => dispatch(getUserInput(obj)),
   }
 );
 
-export default connect(mapStateToProps, mapDispatchToProps)(AuthPage);
+export default connect(mapStateToProps, mapDispatchToProps)(LoginPage);

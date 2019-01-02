@@ -1,22 +1,26 @@
-#container1 {
-  // background-color: #e2dada;
-  // display: flex;
-  // align-items: center;
-}
+.signup-container {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+margin:0;
+width: 100%;
+height: 100%;
+background: url('http://ngn-mag.com/image/wallpaper/fond-decran-blur-10.jpeg');
+background-repeat: repeat-x;
+z-index: 1;
 
 .centered-form {
-  width: 70%;
-  // display: flex;
+  max-width: 500px;
   align-items: center;
   padding: 30px;
-  border: solid 1px #cccccc;
+  box-shadow: 5px 10px 5px 10px #00000011;
+  border-radius: 5px;
+  margin: 100px auto 0 auto;
+  color: white;
 
   form {
     width: 100%;
   }
 }
-
-// .centered-form .panel {
-//   background: rgba(255, 255, 255, 0.8);
-//   box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
-// }
+}

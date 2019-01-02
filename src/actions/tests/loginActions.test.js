@@ -20,10 +20,10 @@ describe(' sigup actions ', () => {
     fetchMock.restore();
   });
 
-  it('Handles registers========== a user', () => {
+  it('Handles login ========== a user', () => {
     fetchMock.post(LOGIN_URL, data);
     const store = mockStore({});
-    const expectedAction = [{ type: ACTION_TYPE.USER_LOGIN, payload: data }];
+    const expectedAction = [{ type: ACTION_TYPE.USER_LOGIN_SUCCESS, payload: data }];
     return store
       .dispatch(userLogin(data))
       .then(() => expect(store.getActions()).toEqual(expectedAction));

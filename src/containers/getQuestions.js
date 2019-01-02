@@ -23,7 +23,7 @@ export class ViewallQtns extends Component {
 }
 
 ViewallQtns.propTypes = {
-  questions: PropTypes.arrayOf(PropTypes.array).isRequired,
+  questions: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   viewAllQtns: PropTypes.func.isRequired,
 };
 

@@ -12,12 +12,12 @@ const userLogin = user => (dispatch) => {
       },
       body: JSON.stringify(user),
     })
-    .then(response => (response.json())
+    .then(response => response.json()
       .then(data => ((response.ok && Promise.resolve(data)) || (!response.ok && Promise.reject(data)
       ))))
     .then((data) => {
       dispatch({
-        type: ACTION_TYPE.USER_LOGIN,
+        type: ACTION_TYPE.USER_LOGIN_SUCCESS,
         payload: data,
       });
       localStorage.setItem('token', data.token);

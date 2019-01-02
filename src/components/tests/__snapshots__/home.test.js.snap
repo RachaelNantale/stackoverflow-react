@@ -1,11 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders the signup component 1`] = `
-<div
-  className="container"
->
-  <p>
-    Hello World
-  </p>
-</div>
+<BrowserRouter>
+  <div>
+    <div
+      className="header-img"
+    >
+      <img
+        alt="banner"
+        src="https://thenextweb.com/wp-content/blogs.dir/1/files/2013/11/glasses-books.jpg"
+      />
+    </div>
+    <div
+      className="title text-center"
+    >
+      <h2>
+        Top Questions
+      </h2>
+    </div>
+    <Connect(ViewallQtns) />
+  </div>
+</BrowserRouter>
 `;

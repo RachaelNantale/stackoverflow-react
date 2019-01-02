@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Signup.scss';
 
-const Signup = ({ onSubmit, onChange }) => (
-  <div className="container" id="container1">
-    <h3 className="text-left">Sign up</h3>
+const Signup = ({ onSubmit, onChange, title }) => (
+  <div className=" signup-container">
     <form className="centered-form" onSubmit={onSubmit}>
+      <h3 className="text-center ">{title}</h3>
       <div className="form-group">
         <input
           type="email"
@@ -34,6 +34,7 @@ const Signup = ({ onSubmit, onChange }) => (
 Signup.propTypes = {
   onChange: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default Signup;
