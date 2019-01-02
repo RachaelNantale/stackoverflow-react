@@ -11,4 +11,15 @@ img {
   .header-img {
     height: 10rem;
   }
+  .signup-container {
+    background: white !important;
+    
+    .centered-form {
+    box-shadow: none !important;
+    border-radius: 5px;
+    margin: 100px 10px 10px 10px !important;
+    border: 1px solid #dddddd;
+    color: #000 !important;
+    }
+  } 
 }
